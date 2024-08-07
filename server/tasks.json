@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Data Processing",
+    "status": "Pending",
+    "user": "Moshe Cohen",
+    "group": "Product Manager Team",
+    "details": "Processing data for Q2 report",
+    "dateSubmitted": null,
+    "dateCompleted": null
+  },
+  {
+    "id": 2,
+    "name": "Report Generation",
+    "status": "Pending",
+    "user": "Yoni Levi",
+    "group": "Frontend Team",
+    "details": "Generating the annual report",
+    "dateSubmitted": null,
+    "dateCompleted": null
+  },
+  {
+    "id": 3,
+    "name": "Unit tests",
+    "status": "Pending",
+    "user": "Yosi Dayan",
+    "group": "Frontend Team",
+    "details": "write unit tests for the new code",
+    "dateSubmitted": null,
+    "dateCompleted": null
+  }
+]

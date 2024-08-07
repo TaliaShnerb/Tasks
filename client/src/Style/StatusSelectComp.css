@@ -1,0 +1,12 @@
+.status-controls select {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .status-controls select:focus {
+    outline: none;
+    border-color: green;
+  }

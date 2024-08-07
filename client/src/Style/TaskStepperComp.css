@@ -1,0 +1,16 @@
+.step-label {
+    color: rgba(0, 0, 0, 0.38) !important;
+  }
+  
+  .step-completed .MuiStepLabel-iconContainer {
+    color: green !important;
+  }
+  
+  .MuiStepIcon-root {
+    color: #ccc; 
+  }
+  
+  .MuiStepIcon-root.Mui-completed {
+    color: green !important;
+  }
+

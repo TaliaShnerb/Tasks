@@ -1,0 +1,23 @@
+ [
+        {
+            "id": 1,
+            "name": "Data Processing",
+            "status": "Pending",
+            "user": "developer1",
+            "group": "teamA",
+            "details": "Processing data for Q2 report",
+            "dateSubmitted": "2024-08-01T12:00:00Z",
+            "dateCompleted": null
+           
+        },
+        {
+            "id": 2,
+            "name": "Report Generation",
+            "status": "Succeeded",
+            "user": "developer2",
+            "group": "teamB",
+            "details": "Generating the annual report",
+            "dateSubmitted": "2024-08-02T14:00:00Z",
+            "dateCompleted": "2024-08-03T15:00:00Z"
+        }
+    ]
