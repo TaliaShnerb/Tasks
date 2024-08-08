@@ -75,6 +75,7 @@ Make sure you have the following installed on your machine:
    To run the E2E tests:
 
    ```bash
+   cd src
    cd Tests
    node e2eTest.js
    ```
