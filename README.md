@@ -40,6 +40,16 @@ Make sure you have the following installed on your machine:
 
 ### Running the Application
 
+#### Run with Docker
+
+``` bash
+docker-compose up --build
+```
+Note: when the docker compose is running, the results of unit tests is appear in the CMD
+The frontend application should now be running at [http://localhost:3000](http://localhost:3000) and the backend server at [http://localhost:5000](http://localhost:5000).
+
+#### Run without Docker
+
 1. **Start the backend server:**
 
    ```bash
@@ -53,12 +63,10 @@ Make sure you have the following installed on your machine:
    cd ../client
    npm start
    ```
+   Note: you should to change the port for client because docker's code 
+   The frontend application should now be running at [http://localhost:YOUR_PORT]
 
-   The frontend application should now be running at [http://localhost:3000](http://localhost:3000) and the backend server at [http://localhost:5000](http://localhost:5000).
-
-### Running Tests
-
-1. **Unit Tests (Jest):**
+3. **Unit Tests (Jest):**
 
    - **Frontend:**
 
@@ -68,7 +76,7 @@ Make sure you have the following installed on your machine:
      ```
    
 
-2. **End-to-End Tests (Selenium):**
+4. **End-to-End Tests (Selenium):**
 
    Ensure you have a WebDriver installed (e.g., ChromeDriver for Chrome).
 
@@ -80,11 +88,12 @@ Make sure you have the following installed on your machine:
    node e2eTest.js
    ```
 
+
 ### Folder Structure
 
 - `client/` - React frontend codebase.
 - `server/` - Node.js backend codebase.
-- `Tests/` - Selenium end-to-end tests.
+- `client/src/Tests/` - Selenium end-to-end tests.
 
 
 
