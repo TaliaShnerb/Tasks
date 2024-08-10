@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import TaskProgress from './TaskComp.js';
 
+const api = process.env.REACT_APP_API_URL;
 
 const TaskList = () => {
   const [tasks, setTasks] = useState([]);
@@ -12,7 +13,7 @@ const TaskList = () => {
     const fetchTasks = async () => {
       try {
         let data = '';
-        data = await fetch('/getTasks')
+        data = await fetch(`${api}/getTasks`)
           .then(response => response.json());
         console.log(data);
         setTasks(data);

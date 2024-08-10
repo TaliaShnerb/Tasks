@@ -2,18 +2,19 @@ const express = require('express');
 const app = express();
 const fs = require('fs');
 const path = require('path');
+const cors = require('cors');
+
 // const port = 5000;
 const filePath = path.join(__dirname, 'tasks.json');
 
 app.use(express.json());
-const PORT = process.env.PORT || 5000;
-
+const PORT = process.env.PORT || 3000;
+app.use(cors());
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on port ${PORT}`);
 });
 
-app.get('/getTasks' , (req , res)=>{
-    
+app.get('/getTasks' , (req , res)=>{    
       // read JSON file
     fs.readFile(filePath, 'utf8', (err, data) => {
       if (err) {
@@ -26,7 +27,6 @@ app.get('/getTasks' , (req , res)=>{
 
 app.post('/saveChanges',(req , res)=>{
     const { id, status, dateSubmitted, dateCompleted } = req.body;
-
   // Read the JSON file
   fs.readFile(filePath, 'utf8', (err, data) => {
     if (err) {

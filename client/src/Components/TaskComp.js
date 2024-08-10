@@ -28,6 +28,7 @@ const TaskProgress = ({ task }) => {
 
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
+  const api = process.env.REACT_APP_API_URL;
 
   // display or remove the details
   const toggleDetails = () => {
@@ -61,7 +62,7 @@ const TaskProgress = ({ task }) => {
       body: JSON.stringify(obj)
     }
     try {
-      const response = await fetch('/saveChanges', fetchParams);
+      const response = await fetch(`${api}/saveChanges`, fetchParams);
 
       if (!response.ok) {
         throw new Error('Network response was not ok');

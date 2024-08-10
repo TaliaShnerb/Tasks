@@ -1,14 +1,18 @@
-version: '3'
+version: '3.9'
 services:
   client:
     build:
       context: ./client
     ports:
-      - "3000:80"  # מיפוי פורט 80 בקונטיינר לפורט 3000 במחשב המארח
+      - "3000:80"  
+    depends_on:
+      - server
     environment:
-      - REACT_APP_API_URL=http://server:5000  # הגדרת הכתובת של השרת
+      - REACT_APP_API_URL=http://localhost:5000  
   server:
     build:
       context: ./server
     ports:
-      - "5000:5000"  # מיפוי פורט 5000 בקונטיינר לפורט 5000 במחשב המארח
+      - "5000:3000"
+    environment:
+      - PORT= 3000
