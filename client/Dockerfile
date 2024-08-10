@@ -10,6 +10,8 @@ RUN npm install
 
 COPY . .
 
+RUN timeout 40 npm test -- --forceExit --runInBand || true
+
 RUN npm run build
 
 FROM nginx:alpine
