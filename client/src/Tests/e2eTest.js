@@ -19,7 +19,7 @@ const assert = require('assert');
     // select value from combobox
     let selectElement = await driver.findElement(By.css('.status-controls select'));
     let select = new Select(selectElement);
-    await select.selectByVisibleText('Complete'); // בחר את הערך הרצוי מתוך רשימת הערכים
+    await select.selectByVisibleText('Complete'); 
 
     // check that the submitted date is appear
     let submitDateElement = await driver.wait(until.elementLocated(By.id('submittedDate1')), 10000);
