@@ -1,8 +1,6 @@
-
 const { Builder, By, until } = require('selenium-webdriver');
 const { Select } = require('selenium-webdriver/lib/select');
 const assert = require('assert');
-
 
 (async function example() {
   let driver = await new Builder().forBrowser('chrome').build();
@@ -10,16 +8,18 @@ const assert = require('assert');
     await driver.get('http://localhost:3000/');
     let addIcon = await driver.wait(until.elementLocated(By.css('[data-testid="add-icon"]')), 10000);
 
+    await new Promise(resolve => setTimeout(resolve, 5000));
     // click on "Save Changes" button
     await addIcon.click();
 
     // wait for task details
     await driver.wait(until.elementIsVisible(await driver.findElement(By.css('.task-details'))), 10000);
 
+    await new Promise(resolve => setTimeout(resolve, 5000));
     // select value from combobox
     let selectElement = await driver.findElement(By.css('.status-controls select'));
     let select = new Select(selectElement);
-    await select.selectByVisibleText('Complete'); // בחר את הערך הרצוי מתוך רשימת הערכים
+    await select.selectByVisibleText('Complete'); 
 
     // check that the submitted date is appear
     let submitDateElement = await driver.wait(until.elementLocated(By.id('submittedDate1')), 10000);
@@ -55,6 +55,7 @@ const assert = require('assert');
       }
     }
 
+    await new Promise(resolve => setTimeout(resolve, 5000));
     // click on "Save Changes" button
     let saveButton = await driver.findElement(By.xpath('//button[text()="Save Changes"]'));
     await saveButton.click();
@@ -65,6 +66,8 @@ const assert = require('assert');
     let alertText = await alertContainer.getText();
     assert.strictEqual(alertText, 'success\nThe data has been updated successfully!', 'The alert is incorrect');
     console.log(`Alert text: ${alertText}`);
+    await new Promise(resolve => setTimeout(resolve, 10000));
+
   }
   catch (error) {
     // Handling errors and printing the error message
