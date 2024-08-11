@@ -63,8 +63,8 @@ The frontend application should now be running at [http://localhost:3000](http:/
    cd ../client
    npm start
    ```
-   Note: you should to change the port for client because docker's code 
-   The frontend application should now be running at [http://localhost:YOUR_PORT]
+  The frontend application should now be running at [http://localhost:3000](http://localhost:3000) and the backend server at [http://localhost:5000](http://localhost:5000).
+
 
 3. **Unit Tests (Jest):**
 
