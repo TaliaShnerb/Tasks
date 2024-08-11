@@ -3,12 +3,13 @@ const app = express();
 const fs = require('fs');
 const path = require('path');
 const cors = require('cors');
+const dotenv = require('dotenv').config();
 
 // const port = 5000;
 const filePath = path.join(__dirname, 'tasks.json');
 
 app.use(express.json());
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.MY_PORT || 3000;
 app.use(cors());
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on port ${PORT}`);

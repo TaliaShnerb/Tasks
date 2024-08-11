@@ -2,11 +2,11 @@
   {
     "id": 1,
     "name": "Data Processing",
-    "status": "Pending",
+    "status": "Succeeded",
     "user": "Moshe Cohen",
     "group": "Product Manager Team",
     "details": "Processing data for Q2 report",
-    "dateSubmitted": null,
+    "dateSubmitted": "2024-08-11T05:33:08.184Z",
     "dateCompleted": null
   },
   {
