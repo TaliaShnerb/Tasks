@@ -11,12 +11,14 @@ This project is a web application for manage tasks, built with React for the fro
 Make sure you have the following installed on your machine:
 - [Node.js](https://nodejs.org/) (v14 or higher)
 - [npm](https://www.npmjs.com/get-npm)
+- Docker 
 
 ### Running the Application
 
 #### Run with Docker
 
 ``` bash
+git clone https://github.com/TaliaShnerb/Tasks.git
 docker-compose up --build
 ```
 Note: when the docker compose is running, the results of unit tests is appear in the CMD
