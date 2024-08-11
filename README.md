@@ -32,7 +32,7 @@ The frontend application should now be running at [http://localhost:3000](http:/
 
    ```bash
    git clone https://github.com/TaliaShnerb/Tasks.git
-   cd your-repository
+   cd Tasks
    ```
 
 2. **Install dependencies for both frontend and backend:**
@@ -61,7 +61,7 @@ The frontend application should now be running at [http://localhost:3000](http:/
 2. **Start the frontend development server:**
 
    ```bash
-   cd ../client
+   cd client
    npm start
    ```
   The frontend application should now be running at [http://localhost:3000](http://localhost:3000) and the backend server at [http://localhost:5000](http://localhost:5000).
@@ -84,8 +84,7 @@ The frontend application should now be running at [http://localhost:3000](http:/
    To run the E2E tests:
 
    ```bash
-   cd src
-   cd Tests
+   cd client/src/Tests
    node e2eTest.js
    ```
 
